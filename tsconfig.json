@@ -1,44 +1,87 @@
+
 {
-  // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
-    // File Layout
-    // "rootDir": "./src",
-    // "outDir": "./dist",
+    // Folder where ALL your TypeScript source files live
+    // You write code only inside /src
+    "rootDir": "./src",
 
-    // Environment Settings
-    // See also https://aka.ms/tsconfig/module
-    "module": "nodenext",
-    "target": "esnext",
-    "types": [],
-    // For nodejs:
-    // "lib": ["esnext"],
-    // "types": ["node"],
-    // and npm install -D @types/node
+    // Folder where compiled JavaScript files go
+    // TypeScript outputs JS here for Node to run
+    "outDir": "./dist",
 
-    // Other Outputs
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
+    // The JavaScript version TypeScript will compile to
+    // ES2020 works well with modern Node.js
+    "target": "ES2020",
 
-    // Stricter Typechecking Options
-    "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
+    // Module system used in the generated JavaScript
+    // CommonJS is what Node.js understands by default
+    "module": "CommonJS",
 
-    // Style Options
-    // "noImplicitReturns": true,
-    // "noImplicitOverride": true,
-    // "noUnusedLocals": true,
-    // "noUnusedParameters": true,
-    // "noFallthroughCasesInSwitch": true,
-    // "noPropertyAccessFromIndexSignature": true,
+    // Tells TypeScript how Node resolves imports (node-style)
+    // Matches how require/import works in Node.js
+    "moduleResolution": "node",
 
-    // Recommended Options
+    // Allows: import express from "express"
+    // Converts CommonJS packages to work with ES import syntax
+    "esModuleInterop": true,
+
+    // Enables all important type-checking rules
+    // Helps catch bugs early while coding
     "strict": true,
-    "jsx": "react-jsx",
-    "verbatimModuleSyntax": true,
-    "isolatedModules": true,
-    "noUncheckedSideEffectImports": true,
-    "moduleDetection": "force",
-    "skipLibCheck": true,
+
+    // Skips type-checking of library declaration files (.d.ts)
+    // Makes compilation faster and avoids unnecessary errors
+    "skipLibCheck": true
   }
 }
+
+// {
+//   // Visit https://aka.ms/tsconfig to read more about this file
+//   "compilerOptions": {
+//     // File Layout
+//     "rootDir": "./src",
+//      "outDir": "./dist",
+
+//     // Environment Settings
+//     // See also https://aka.ms/tsconfig/module
+//     //"module": "nodenext",
+    
+
+//     //"target": "esnext",
+//     "target": "es2020",
+//     "module": "commonjs",
+//     "moduleResolution": "node",
+//     "esModuleInterop": true,
+//     //"types": [],
+//     // For nodejs:
+//      //"lib": ["esnext"],
+//     // "types": ["node"],
+//     // and npm install -D @types/node
+
+//     // Other Outputs
+//     "sourceMap": true,
+//     "declaration": true,
+//     "declarationMap": true,
+
+//     // Stricter Typechecking Options
+//     "noUncheckedIndexedAccess": true,
+//     "exactOptionalPropertyTypes": true,
+
+//     // Style Options
+//     // "noImplicitReturns": true,
+//     // "noImplicitOverride": true,
+//     // "noUnusedLocals": true,
+//     // "noUnusedParameters": true,
+//     // "noFallthroughCasesInSwitch": true,
+//     // "noPropertyAccessFromIndexSignature": true,
+
+//     // Recommended Options
+//     "strict": true,
+//   //  "jsx": "react-jsx",
+//     //"verbatimModuleSyntax": true,
+//    // "isolatedModules": true,
+//    // "noUncheckedSideEffectImports": true,
+//     //"moduleDetection": "force",
+//     "skipLibCheck": true,
+//   }
+// }
