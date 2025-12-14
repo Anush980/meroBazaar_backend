@@ -32,3 +32,5 @@ coverage/
 # Optional: IDE/editor files
 .vscode/
 .idea/
+
+/src/generated/prisma

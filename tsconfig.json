@@ -3,7 +3,7 @@
   "compilerOptions": {
     // Folder where ALL your TypeScript source files live
     // You write code only inside /src
-    "rootDir": "./src",
+    "rootDir": ".",
 
     // Folder where compiled JavaScript files go
     // TypeScript outputs JS here for Node to run
